@@ -34,11 +34,53 @@ section.hero {
 
     animation: slideUp 4.5s 1.5s infinite ease;
   }
+
+  /* Buttons */
+  & .buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    & .button {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      border-radius: 5rem;
+
+      transition: scale 350ms;
+
+      &.buy {
+        padding: 1.5rem 3rem;
+        background-color: var(--snitap-sun);
+      }
+
+      &.play span {
+        display: flex;
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    & .shadow {
+      box-shadow:
+        0 2px 5px rgb(0 0 0 / 0.1),
+        0 9px 9px rgb(0 0 0 / 0.09),
+        0 20px 12px rgb(0 0 0 / 0.05),
+        0 36px 15px rgb(0 0 0 / 0.01);
+    }
+  }
 }
 
 @keyframes slideUp {
   /* Radical static */
-  0%, 22% {
+  0%,
+  22% {
     transform: translateY(0);
   }
 
@@ -60,7 +102,8 @@ section.hero {
   }
   /* Divertida static */
 
-  33%, 55% {
+  33%,
+  55% {
     transform: translateY(-5rem);
   }
 
@@ -72,7 +115,7 @@ section.hero {
   58% {
     transform: translateY(calc(-10rem + 10px));
   }
-  
+
   60% {
     transform: translateY(calc(-10rem - 5px));
   }
@@ -82,7 +125,8 @@ section.hero {
   }
   /* Saudável static */
 
-  66%, 88% {
+  66%,
+  88% {
     transform: translateY(-10rem);
   }
 
@@ -94,7 +138,7 @@ section.hero {
   91% {
     transform: translateY(calc(-15rem + 10px));
   }
-  
+
   93% {
     transform: translateY(calc(-15rem - 5px));
   }
